@@ -80,7 +80,7 @@ $(function(){
     // EVENT HANDLERS
 
     $(".remove").on("click", function (e) {
-
+        // Smth wrong with first delete post, can understand problem(
         var target = $(e.target);
         var id = target.attr("data-post");
 

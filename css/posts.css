@@ -1,0 +1,30 @@
+#header {}
+    #header ol {}
+        #header ol li {
+            margin-bottom: 7px;
+        }
+
+#posts {
+    margin: 30px 0;
+}
+.btn-xs{
+    margin-right: 5px;
+}
+    #posts article {
+        margin: 0 0 15px 0;
+        padding: 0 0 20px 0;
+
+        width: 350px;
+        z-index: 99;
+        border-bottom: 1px solid #fff;
+    }
+        #posts article:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+            border-bottom: 0;
+        }
+        #posts article footer {}
+            #posts article footer .tags {
+                margin-bottom: 15px;
+            }

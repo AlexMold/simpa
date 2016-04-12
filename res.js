@@ -1,9 +1,8 @@
 
-$(function()//noinspection GjsLint
-{
+$(function(){
 
 
-    //var postIds;
+    var postIds;
 
     if (localStorage.length) {
         parseStorage();
@@ -12,9 +11,10 @@ $(function()//noinspection GjsLint
         $.getJSON('json/posts.json', function (data) {
 
             // map data
-            data.forEach(function(post){
+            postIds = data.forEach(function(post){
                 var str = JSON.stringify(post);
                 localStorage.setItem(post.id, str);
+                return post.id;
             });
 
             initParse(data);
@@ -79,7 +79,7 @@ $(function()//noinspection GjsLint
 
     // EVENT HANDLERS
 
-    $("body").on("click", ".controls .remove[data-post]", function (e) {
+    $(".remove").on("click", function (e) {
         // Smth wrong with first delete post, can understand problem(
         var target = $(e.target);
         var id = target.attr("data-post");
